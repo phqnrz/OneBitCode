@@ -1,0 +1,48 @@
+Anotações e Leituras recomendadas:
+
+Seletores:
+- https://developer.mozilla.org/pt-BR/docs/Web/CSS/Seletores_CSS​
+- https://code.tutsplus.com/pt/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+
+Especificidade: 
+- https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity
+
+O CSS sempre vai buscar colocar o estilo mais específico pra um determinado lugar. 
+Regra da pontuação (sobrescrevendo a herança):
+
+- Cada  seletor simples/pseudoelemento -> d = +1 (0, 0, 0, 1); Exemplo: h1 { background: blue; }
+
+- Cada classe/pseudoclasse/atributo -> c = +1 (0, 0, 1, 0); Exemplo: .red { background: red; }
+
+- Cada id -> b = +1 (0, 1, 0, 0); Exemplo: id="titulo" / declaração id: #titulo{ background: lightblue; }
+
+- Estilo inline -> a = +1 (1, 0, 0, 0); Exemplo: style="background: green;"
+
+Obs1.: Um seletor + classe, tem mais força que uma classe sozinha. Exemplo:  h1.red { background: yellow; } é mais forte que .red { background: red; }. 
+Obs2.: Quando há empate na pontuação, ou seja, existem duas declarações de mesmo peso para o mesmo elemento, o último a ser declarado irá se sobrepor. 
+Exemplo: .red{ background: red; } e logo após tem .green { background: green; }. A classe .green terá prioridade. 
+
+
+Resumindo: 
+1º Inline;
+2º ID;
+3º tag.class;
+4º class;
+5º tag/elemento
+
+Exemplo de pontuação: 
+div#container ul li -> (0, 1, 0, 3)
+
+Ordem de Especificidade:
+1º Declaração Inline, exemplo: style="background: green;"
+
+2º Declaração de Classes sempre tem prioridade em relação aos seletores simples. Exemplo: declarar a cor do background com a class .bg { color: red;} terá prioridade
+em relação ao seletor simples <style> dentro da tag <head>. Classes têm prioridades por serem mais específicias, uma classe é mais forte.
+
+3º Declaração de Identificadores são mais fortes que Classes. 
+Exemplo: <style> #titulo { color: lightblue;} terá prioridade em relação a declaração de uma classe no arquivo.css externo.
+
+
+A exceção !important: 
+Quando a regra !important é utilizada na declaração do estilo substitui qualquer outra declaração feita no CSS, 
+onde quer que esteja na lista de declaração. Contudo, !important não tem nada a ver com especificação. 

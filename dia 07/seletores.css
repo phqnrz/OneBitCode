@@ -1,0 +1,47 @@
+/*  O * seleciona e estiliza todos os elementos do documentos */
+/* * {
+    border: 2px solid lightcoral;
+} */ 
+
+
+/* Seletor de descendência:
+    No exemplo abaixo, aplicar estilo em todos os anchors, no caso a tag <a>, que estejam dentro da tag <li>.
+
+li > a {
+    color: red;
+}
+*/
+
+
+/*Seletor filho: 
+    Nesse caso, é semelhante ao Seletor de Descendência, no entando, 
+    o sinal ">" determina que todo <a> que for filho, ou seja, dentro de <li>, vai receber o estilo escolhido.
+
+li > a {
+    }
+*/
+
+
+/* Seletor Adjacente: 
+    Suponha que você quer colocar estilo em todas as tags <h3> que vierem logo depois da tag <h1>. Tem que ser realmente uma imediata a outra. 
+   
+h1 + h3 {
+    border: 2px dashed lightseagreen;
+}
+*/
+
+/*Este seletor serve para todos os anchors <a> que contenham o href mencionado, receberão o atributo declarado.
+
+a[href="https://www.spacex.com/"] {
+    color:aquamarine;
+}
+*/
+
+
+/*Imagine que eu queira colocar cor em todos os <li> de segunda estância. Caso queira mudar a estância do item, basta apenas alterar o valor declarado. 
+  No caso de declarar "odd", irá alterar todos os números ímpares da listagem.
+*/
+
+li:nth-of-type(odd) {
+    color: darkorange;
+}

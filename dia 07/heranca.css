@@ -1,0 +1,17 @@
+.bg {
+    background-color: lightcoral;
+}
+
+h1 {
+    background: lightyellow;
+}
+
+/* Nos dois exemplos abaixo, o segundo precede o primeiro na ordem de especificidade porque é mais específico na declaração, tem mais força. */
+
+.bg h1{
+    background-color: orangered;
+}
+
+h1.bg {
+    background-color: orangered;
+}
