@@ -1,0 +1,26 @@
+.lua {
+    color: darkorange;
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+h1 {
+    background-color: lightgray;
+    font-size: 30px;
+    /*border-color: lightcoral;
+    border-width: 6px;
+    border-style: ridge; 
+    
+    É possível declarar por cada atributo, como o exemplo acima; também é possível declarar num único atributo border, como no exemplo abaixo.
+
+    */
+    border: lightsalmon 10px solid;
+}
+
+body {
+    background-color: aquamarine;
+    background-image: url('https://opetroleo.com.br/wp-content/uploads/2021/08/dfbd5c43-2184-4349-89f9-aee7fad69620-getty-1319961002.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
